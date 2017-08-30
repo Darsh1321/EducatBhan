@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{}
+form{
+color: pink;
+}
+.big{ width: 1em; height: 1em;  }
+
+input[type='radio']:checked:after{
+
+border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+background-color: #00FF00;
+content: ' ' ;
+visibility: visible;
+border: 2 px solid white;
+}
+
+</style>
+</head>
+<body>
+
+<form label="abc01" name="abc01" action="./page2" method="post" align="middle" style="font-size:50px">{% csrf_token %}
+
+<br>
+<br>
+<br>
+Teacher?
+<input type="radio" class="big" name="profession" value="Teacher" style="font-size:50px">
+<br>
+<br>
+Student?
+<input type="radio" class="big" name="profession" value="Student" style="font-size:50px">
+<br>
+
+<br>
+<input type="submit"  name="submit" value="All set" style="font-size:30px">
+</form>
+</body>
+</html>
